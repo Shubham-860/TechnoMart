@@ -138,4 +138,36 @@ public class ProductDao {
 		
 		return row;
 	}
+
+	public boolean insertProduct(Product product) {
+        boolean result = false;
+        try {
+            query = "INSERT INTO product (pname, pinfo, pimg, prate, cat_id) VALUES (?, ?, ?, ?, ?)";
+            pst = this.con.prepareStatement(query);
+            pst.setString(1, product.getPname());
+            pst.setString(2, product.getPinfo());
+            pst.setString(3, product.getPimg());
+            pst.setDouble(4, product.getPrate());
+            pst.setInt(5, product.getCat_id());
+            int rows = pst.executeUpdate();
+            result = rows > 0;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
+
+	public boolean deleteProduct(int pid) {
+        boolean result = false;
+        try {
+            query = "DELETE FROM product WHERE pid = ?";
+            pst = this.con.prepareStatement(query);
+            pst.setInt(1, pid);
+            int rows = pst.executeUpdate();
+            result = rows > 0;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
 }

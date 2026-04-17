@@ -40,8 +40,8 @@
 							    <div class="text-white bg-dark d-flex justify-content-center" style="padding-bottom: 20px;">
 							    <button class="btn btn-primary btn-lg" type="submit" >Sign up</button>
 							    </div>
-							    <div class="text-white bg-dark d-flex justify-content-center" style="padding-bottom: 20px;"><span class="text-secondary">Already have an account <br /></span><a class="link-info" href="login.html" style="text-decoration: none;">click hear</a></div>
-							</form>		
+							    <div class="text-white bg-dark d-flex justify-content-center" style="padding-bottom: 20px;"><span class="text-secondary">Already have an account?<br /></span><a class="link-info" href="login.jsp" style="text-decoration: none;">click hear</a></div>
+							</form>
                     </div>
                     <div class="col-xxl-5"><img class="img-fluid border rounded border-dark" data-aos="fade-left" src="assets/img/gif/image_processing20210901-21066-135ydhi.gif"></div>
                     <div class="col-xxl-1"></div>

@@ -39,8 +39,8 @@
 
 	<main class="text-white bg-dark page login-page" style="background: var(--bs-dark);">
     <section class="fs-5 text-white bg-dark clean-block clean-cart dark px-2">
-        <div class="row px-2">
-            <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-5 col-xxl-5 text-start" style="margin-right: auto;margin-left: auto;">
+        <div class="row px-2 mx-auto">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-5 col-xxl-5 text-start mx-auto mb-4">
                 <h1 style="margin-top: 0;">Profile</h1>
                 <form method="post" action="checkout">
                         <div class="row">
@@ -61,7 +61,11 @@
                         </div>
                     </form>
             </div>
-            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-7 col-xxl-7">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-7 col-xxl-7 mx-auto">
+                <h3 class="text-warning mb-4">Order History</h3>
+                <%
+				if(orders != null && !orders.isEmpty()){
+				%>
                 <div class="w-100 my-2 py-1 hidden-xl" style="border-bottom-width: 1px;border-bottom-style: solid;">
                     <div class="row g-0 text-center justify-content-center" style="margin-right: auto;margin-left: auto;">
                         <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 col-xxl-3 text-center">
@@ -87,10 +91,8 @@
                 </div>
                 
                 <%
-				if(orders != null){
 				    for (Order o:orders){
 				    %>
-				        
 				        <div class="w-100 my-2 py-1" style="border-bottom-width: 1px;border-bottom-style: solid;">
                     <div class="row g-0 text-center justify-content-center" style="margin-right: auto;margin-left: auto;">
                         <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 col-xxl-3 text-center">
@@ -111,14 +113,15 @@
                                 </svg></a></div>
                     </div>
                 </div>
-				        
 				    <%}
-				}%>
-                
-                
-                
-                
-                
+				}else{%>
+				<!-- No Orders Found Message -->
+				<div class="text-center py-5 mx-auto">
+				    <h1 class="display-5 text-warning">No Orders Found</h1>
+				    <div class="text-warning"><i class="fab fa-dropbox fa-5x"></i></div>
+				    <p class="text-secondary mt-3">You haven't placed any orders yet. <a href="prebuild-computers.jsp" class="link-info">Start shopping</a></p>
+				</div>
+				<%}%>
             </div>
         </div>
     </section>

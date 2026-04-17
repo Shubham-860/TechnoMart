@@ -1,0 +1,89 @@
+# Build directories
+target/
+out/
+
+# IDE files
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+*.vsix
+
+# Compiled Java files
+*.class
+*.classpath
+*.project
+
+# Package files
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+
+# Log files
+*.log
+logs/
+
+# OS specific files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Maven
+.m2/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.maven.metadata.xml
+
+# Node modules (if using frontend build tools)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Local environment files
+.env
+.env.local
+.env.*.local
+
+# Temp files
+*.tmp
+temp/
+*.bak
+
+# Database files (optional)
+*.db
+*.sqlite
+*.sqlite3
+
+# IDE plugins
+.plugins/
+
+# Gradle (if using)
+.gradle/
+build/
+
+# Eclipse (if using)
+.settings/
+bin/
+
+# Jetbrains
+*.jks
+*.hprof
+
+# NetBeans
+nbproject/
+dist/
+build/
+nbbuild/
+nbdist/
+.nb-gradle/
+
